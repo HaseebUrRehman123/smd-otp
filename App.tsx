@@ -15,15 +15,7 @@ import {
 import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha';
 import { initializeApp, getApps, getApp, FirebaseApp } from 'firebase/app';
 import { getAuth, PhoneAuthProvider, signInWithCredential } from 'firebase/auth';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyHk3mV9qL2rX8nW4pY7tZ6uI1oE5sA0cB",
-  authDomain: "otp-verify-app-9f2d1.firebaseapp.com",
-  projectId: "otp-verify-app-9f2d1",
-  storageBucket: "otp-verify-app-9f2d1.appspot.com",
-  messagingSenderId: "847392015648",
-  appId: "1:847392015648:web:3f8a2c1d9e7b4f56a2c891",
-};
+import { firebaseConfig } from './firebaseConfig';
 
 const app: FirebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
